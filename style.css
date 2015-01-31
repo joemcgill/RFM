@@ -269,7 +269,7 @@ input,
 select,
 textarea {
   color: #37474f;
-  font-family: sans-serif;
+  font-family: Tahoma, sans-serif;
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.5;
@@ -277,6 +277,10 @@ textarea {
 
 h1, h2, h3, h4, h5, h6 {
   clear: both;
+}
+
+h1, h2, h3 {
+  font-family: "PT Serif", "Times New Roman", serif;
 }
 
 p {
