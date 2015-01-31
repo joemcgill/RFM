@@ -1,21 +1,54 @@
 .site-header {
-	padding: 8px;
-	padding: .5rem;
-	background-color: $color__primary;
-	color: #fff;
+	position: relative;
+	padding: 0 .5rem 0;
+	background-color: #fff;
+	border-top: 5px solid $color__primary;
 	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.site-branding {
+	margin-right: 60px;
+	margin-top: .5rem;
+	margin-bottom: .5rem;
 
 	a {
-		color: inherit;
+		color: $color__primary;
+	}
+}
+
+.site-title {
+	font-size: 1.5em;
+	margin: 0 0 .5rem;
+	line-height: 1.2;
+
+	> a {
+		text-decoration: none;
+	}
+}
+
+@media screen and (min-width: $bp__one) {
+	.site-header {
+		height: 140px;
+		border-top-size: 10px;
 	}
 
-	@media screen and (min-width: $bp__one) {
-		background-color: #fff;
-		border-top: 10px solid $color__primary;
-		color: $color__text-main;
+	.site-branding {
+		float: left;
+		margin-right: 1.5rem;
+	}
 
-		a {
-			color: $color__primary;
+	.site-title {
+		height: 120px;
+		width: 300px;
+		background: url(img/rfm-logo-2line.svg) no-repeat 20px center;
+
+		> a {
+			display: block;
+			height: 0;
+			width: 100%;
+			padding-top: 100%;
+			overflow: hidden;
+			font-size: 0;
 		}
 	}
 }

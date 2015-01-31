@@ -543,17 +543,58 @@ a:hover, a:active {
   left: auto;
 }
 .main-navigation li {
-  float: left;
   position: relative;
 }
-.main-navigation a {
+.main-navigation a,
+.main-navigation a:visited {
   display: block;
   text-decoration: none;
+  color: #009697;
+}
+
+.menu-primary-nav-container {
+  position: relative;
+  margin: 0 -0.5rem;
+  color: #009697;
+}
+.menu-primary-nav-container .menu-item {
+  display: block;
+  padding: .5rem;
+  border-top: 1px solid rgba(0, 150, 151, 0.2);
+  font-size: .875em;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+}
+.menu-primary-nav-container .menu-item > a {
+  color: inherit;
+}
+.menu-primary-nav-container .menu-item:hover, .menu-primary-nav-container .menu-item:focus {
+  border-color: #009697;
+  background: #009697;
+  color: #fff;
 }
 
 /* Small menu. */
 .menu-toggle {
   display: none;
+  position: absolute;
+  right: 10px;
+  top: .5rem;
+  border-color: #009697;
+  background: transparent;
+  border-radius: 4px;
+  box-shadow: none;
+  color: #009697;
+  text-shadow: none;
+}
+.menu-toggle:hover {
+  background: #009697;
+  color: #fff;
+}
+.menu-toggle:hover, .menu-toggle:focus {
+  border-color: #009697;
+  box-shadow: none;
 }
 
 @media screen and (max-width: 600px) {
@@ -564,6 +605,30 @@ a:hover, a:active {
 
   .main-navigation ul {
     display: none;
+  }
+}
+@media screen and (min-width: 600px) {
+  .main-navigation {
+    clear: none;
+    height: 100%;
+    width: auto;
+    margin: 0;
+  }
+  .main-navigation ul {
+    height: inherit;
+  }
+
+  .menu-primary-nav-container {
+    height: inherit;
+    margin: 0;
+  }
+  .menu-primary-nav-container .menu-item {
+    position: relative;
+    float: left;
+    height: 100%;
+    border-top: none;
+    padding: 100px 1rem .5rem;
+    border-left: 1px solid #009697;
   }
 }
 .site-main .comment-navigation,
@@ -743,26 +808,56 @@ a:hover, a:active {
 10.3 Site Header
 --------------------------------------------------------------*/
 .site-header {
-  padding: 8px;
-  padding: .5rem;
-  background-color: #009697;
-  color: #fff;
+  position: relative;
+  padding: 0 .5rem 0;
+  background-color: #fff;
+  border-top: 5px solid #009697;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
-.site-header a {
-  color: inherit;
+
+.site-branding {
+  margin-right: 60px;
+  margin-top: .5rem;
+  margin-bottom: .5rem;
 }
-@media screen and (min-width: 600px) {
-  .site-header {
-    background-color: #fff;
-    border-top: 10px solid #009697;
-    color: #37474f;
-  }
-  .site-header a {
-    color: #009697;
-  }
+.site-branding a {
+  color: #009697;
 }
 
+.site-title {
+  font-size: 1.5em;
+  margin: 0 0 .5rem;
+  line-height: 1.2;
+}
+.site-title > a {
+  text-decoration: none;
+}
+
+@media screen and (min-width: 600px) {
+  .site-header {
+    height: 140px;
+    border-top-size: 10px;
+  }
+
+  .site-branding {
+    float: left;
+    margin-right: 1.5rem;
+  }
+
+  .site-title {
+    height: 120px;
+    width: 300px;
+    background: url(img/rfm-logo-2line.svg) no-repeat 20px center;
+  }
+  .site-title > a {
+    display: block;
+    height: 0;
+    width: 100%;
+    padding-top: 100%;
+    overflow: hidden;
+    font-size: 0;
+  }
+}
 /*--------------------------------------------------------------
 11.0 Infinite scroll
 --------------------------------------------------------------*/
