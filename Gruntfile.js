@@ -95,18 +95,18 @@ module.exports = function (grunt) {
 
       watch: {
         sass: {
-          files: ['_inc/_sass/*.scss'],
+          files: ['sass/**/*.scss'],
           tasks: ['sass']
         },
         js: {
-          files: ['_js/scripts.js'],
+          files: ['js/scripts.js'],
           tasks: ['uglify']
         },
         php: {
           files: ['**/*.php']
         },
         icons: {
-          files: ['_icons/src/*.svg'],
+          files: ['icons/src/*.svg'],
           tasks: ['svg']
         },
         options: {
