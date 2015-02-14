@@ -29,6 +29,7 @@
 @media screen and (min-width: $bp__one) {
 	.site-header {
 		height: 140px;
+		overflow: hidden;
 		border-top-size: 10px;
 	}
 
@@ -46,7 +47,7 @@
 			display: block;
 			height: 0;
 			width: 100%;
-			padding-top: 100%;
+			padding-top: 40%; // height/width of container
 			overflow: hidden;
 			font-size: 0;
 		}
