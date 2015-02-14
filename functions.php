@@ -6,6 +6,12 @@
  */
 
 /**
+ * Define theme constants
+ */
+define( 'RFM_THEME_DIR', get_template_directory_uri() );
+define('RFM_PATTERNS', 'layouts/patterns/');
+
+/**
  * Set the content width based on the theme's design and stylesheet.
  */
 if ( ! isset( $content_width ) ) {
