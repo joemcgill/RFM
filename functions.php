@@ -119,6 +119,22 @@ function rfm_scripts() {
 add_action( 'wp_enqueue_scripts', 'rfm_scripts' );
 
 /**
+ * Theme Filters. If this list gets large, move to a separate include file
+ */
+function rfm_avoid_title_widows( $title ) {
+	// Find the last space.
+	$last_space = strrpos($title, "\x20");
+
+	// Replace it with a non-breaking space.
+	if ( $last_space ) {
+		$title = substr($title, 0, $last_space) . '&nbsp;' . substr($title, $last_space + 1);
+	}
+
+	return $title;
+}
+add_filter('the_title', 'rfm_avoid_title_widows');
+
+/**
  * Implement the Custom Header feature.
  */
 //require get_template_directory() . '/inc/custom-header.php';
