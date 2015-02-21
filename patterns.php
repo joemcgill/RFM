@@ -11,32 +11,32 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
     <?php /* The loop */
-    if ( have_posts() ) {
-      while ( have_posts() ) : the_post();
-    ?>
+		if ( have_posts() ) {
+			while ( have_posts() ) : the_post();
+		?>
       <h1><?php the_title() ?></h1>
     <?php
-        the_content();
-      endwhile;
-    } else {
-      get_template_part( 'content', 'none' );
-    } //endif
-    ?>
+			the_content();
+			endwhile;
+		} else {
+			get_template_part( 'content', 'none' );
+		} //endif
+		?>
 
       <hr>
 
     <?php
-      /* Pattern loader */
-      $patterns = array(
-        'hero',
+			/* Pattern loader */
+			$patterns = array(
+				'hero',
 				'cards',
-        'buttons'
-      );
+        'buttons',
+			);
 
-      foreach ( $patterns as $pattern ) {
-        get_template_part( RFM_PATTERNS . 'test', $pattern );
-      }
-    ?>
+			foreach ( $patterns as $pattern ) {
+				get_template_part( RFM_PATTERNS . 'test', $pattern );
+			}
+		?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
