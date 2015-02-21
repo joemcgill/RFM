@@ -10,7 +10,7 @@
   position: absolute;
   bottom: $margin;
   width: calc(100% - #{$margin-double});
-  max-width: 60em;
+  max-width: $size__site-wrap;
   left: 50%;
   transform: translateX(-50%);
   color: #fff;
