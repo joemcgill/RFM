@@ -30,7 +30,7 @@ get_header(); ?>
 			$patterns = array(
 				'hero',
 				'cards',
-        'buttons',
+				'buttons',
 			);
 
 			foreach ( $patterns as $pattern ) {
