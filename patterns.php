@@ -28,7 +28,8 @@ get_header(); ?>
     <?php
       /* Pattern loader */
       $patterns = array(
-        'cards',
+        'hero',
+				'cards',
         'buttons'
       );
 
