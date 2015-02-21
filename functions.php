@@ -9,7 +9,7 @@
  * Define theme constants
  */
 define( 'RFM_THEME_DIR', get_template_directory_uri() );
-define('RFM_PATTERNS', 'layouts/patterns/');
+define( 'RFM_PATTERNS', 'layouts/patterns/' );
 
 /**
  * Set the content width based on the theme's design and stylesheet.
@@ -123,16 +123,16 @@ add_action( 'wp_enqueue_scripts', 'rfm_scripts' );
  */
 function rfm_avoid_title_widows( $title ) {
 	// Find the last space.
-	$last_space = strrpos($title, ' ');
+	$last_space = strrpos( $title, ' ' );
 
 	// Replace it with a non-breaking space.
 	if ( $last_space ) {
-		$title = substr($title, 0, $last_space) . '&nbsp;' . substr($title, $last_space + 1);
+		$title = substr( $title, 0, $last_space ) . '&nbsp;' . substr( $title, $last_space + 1 );
 	}
 
 	return $title;
 }
-add_filter('the_title', 'rfm_avoid_title_widows');
+add_filter( 'the_title', 'rfm_avoid_title_widows' );
 
 /**
  * Implement the Custom Header feature.

@@ -16,7 +16,7 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 		<div class="programs grid cols-3">
-		<?php for ( $i = 0; $i < 3; $i++) {
+		<?php for ( $i = 0; $i < 3; $i++ ) {
 			get_template_part( RFM_PATTERNS . 'card', 'program' );
 		} ?>
 		</div>
