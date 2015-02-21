@@ -123,7 +123,7 @@ add_action( 'wp_enqueue_scripts', 'rfm_scripts' );
  */
 function rfm_avoid_title_widows( $title ) {
 	// Find the last space.
-	$last_space = strrpos($title, "\x20");
+	$last_space = strrpos($title, ' ');
 
 	// Replace it with a non-breaking space.
 	if ( $last_space ) {
