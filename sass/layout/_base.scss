@@ -16,3 +16,35 @@
 
 .site-footer {
 }
+
+/* Grid Rules */
+.grid {
+
+  @media screen and (min-width: $bp__one) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: -$margin-and-half;
+    margin-right: -$margin-and-half;
+
+    .card {
+      flex: 0 1 auto;
+      margin: $margin-and-half;
+    }
+
+    &.cols-3 {
+      .card  {
+        flex-basis: 33.3%;
+        max-width: calc(33.3% - 30px);
+      }
+    }
+
+    &.cols-4 {
+      .card  {
+        flex-basis: 25%;
+        max-width: calc(25% - 30px);
+      }
+    }
+
+  }
+}
