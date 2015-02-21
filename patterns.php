@@ -26,9 +26,15 @@ get_header(); ?>
       <hr>
 
     <?php
-      /* Pattern tests */  
-      get_template_part( RFM_PATTERNS . 'test', 'cards' );
-      get_template_part( RFM_PATTERNS . 'test', 'buttons' );
+      /* Pattern loader */
+      $patterns = array(
+        'cards',
+        'buttons'
+      );
+
+      foreach ( $patterns as $pattern ) {
+        get_template_part( RFM_PATTERNS . 'test', $pattern );
+      }
     ?>
 
 		</main><!-- #main -->
