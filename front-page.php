@@ -11,7 +11,7 @@ get_header(); ?>
 
 	<?php get_template_part( RFM_PATTERNS . 'hero' ); ?>
 
-	<div id="primary" class="content-area">
+	<div id="primary" class="content-area full-width">
 
 		<main id="main" class="site-main" role="main">
 
@@ -45,7 +45,9 @@ get_header(); ?>
 		<?php endif; ?>
 
 		</main><!-- #main -->
+
+		<?php get_sidebar(); ?>
+
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

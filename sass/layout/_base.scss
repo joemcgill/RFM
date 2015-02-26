@@ -1,17 +1,32 @@
 .site-content {
-
+  width: 100%;
 }
 
 .content-area {
- padding: 0 $pad $pad-double;
+  @include clearfix();
+  padding: $pad-double $pad;
+  width: 100%;
+  max-width: $size__site-wrap;
+  margin: 0 auto;
 }
 
-.site-main {
- max-width: $size__site-wrap;
- margin: 0 auto;
-}
+@media screen and (min-width: $bp__one) {
+  .site-main {
+    float: left;
+    width: 65%;
+  }
 
-.site-content .widget-area {
+  .widget-area {
+    float: right;
+    width: 30%;
+    overflow: hidden;
+  }
+
+  .full-width .site-main,
+  .full-width .widget-area {
+    float: none;
+    width: auto;
+  }
 }
 
 .site-footer {
