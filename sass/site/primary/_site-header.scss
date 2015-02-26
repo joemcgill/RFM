@@ -1,3 +1,7 @@
+.header-search {
+	display: none; // ugly hackish mess
+}
+
 .site-header {
 	position: relative;
 	padding: $pad $pad 0;
@@ -23,6 +27,15 @@
 }
 
 @media screen and (min-width: $bp__one) {
+	.header-search {
+		display: block;
+		float: right;
+		padding: $pad-half $pad $pad;
+		background-color: $color__primary;
+		border-bottom-right-radius: $border-radius__sm;
+		border-bottom-left-radius: $border-radius__sm;
+	}
+
 	.site-header {
 		border-top-size: 10px;
 		padding-top: 0;
