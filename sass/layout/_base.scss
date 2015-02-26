@@ -29,6 +29,19 @@
 }
 
 .site-footer {
+  padding: $pad-double $pad;
+  background-color: $color__text-main;
+  color: #fff;
+
+  a {
+    color: #fff;
+  }
+
+  .site-info {
+    max-width: 60 * 1.25em;
+    margin: 0 auto;
+    font-size: 80%;
+  }
 }
 
 /* Grid Rules */
