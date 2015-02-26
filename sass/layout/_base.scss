@@ -3,7 +3,6 @@
 }
 
 .content-area {
-  @include clearfix();
   padding: $pad-double $pad;
   width: 100%;
   max-width: $size__site-wrap;
