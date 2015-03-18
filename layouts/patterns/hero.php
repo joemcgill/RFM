@@ -4,6 +4,12 @@
  *
  * @package rfm
  */
+
+$attachment_id = ($attachment_id) ? $attachment_id : get_post_thumbnail_id();
+$hero_large = wp_get_attachment_image_src( $attachment_id, 'hero-lg' );
+$hero_med = wp_get_attachment_image_src( $attachment_id, 'hero-md' );
+$hero_sm = wp_get_attachment_image_src( $attachment_id, 'hero-sm' );
+
 ?>
 
 <div class="hero-wrap">
@@ -11,11 +17,11 @@
     <a href="#">
       <picture class="hero-media">
         <!--[if IE 9]><video style="display: none;"><![endif]-->
-        <source srcset="http://lorempixel.com/g/1400/500/people/1" media="(min-width: 1000px)">
-        <source srcset="http://lorempixel.com/g/1000/500/people/1" media="(min-width: 600px)">
-        <source srcset="http://lorempixel.com/g/600/400/people/1" >
+        <source srcset="<?php echo $hero_large[0]; ?>" media="(min-width: 1000px)">
+        <source srcset="<?php echo $hero_med[0]; ?>" media="(min-width: 600px)">
+        <source srcset="<?php echo $hero_sm[0]; ?>" >
         <!--[if IE 9]></video><![endif]-->
-        <img class="hero-image" srcset="http://lorempixel.com/g/600/400/people/1" alt="A giant stone face at The Bayon temple in Angkor Thom, Cambodia">
+        <img class="hero-image" srcset="<?php echo $hero_large[0]; ?>" alt="A giant stone face at The Bayon temple in Angkor Thom, Cambodia">
       </picture>
     </a>
     <figcaption class="hero-content">

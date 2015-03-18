@@ -7,4 +7,6 @@
 ?>
 <h2>Hero</h2>
 
-<?php  get_template_part( RFM_PATTERNS . 'hero' ); ?>
+<?php $attachment_id = 1854; ?>
+
+<?php include( locate_template( RFM_PATTERNS . 'hero.php' ) ); ?>
