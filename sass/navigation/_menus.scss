@@ -128,7 +128,7 @@
 
 @media screen and (min-width: $bp__one) {
 	.main-navigation {
-		/* float: right; */
+		float: right;
 		clear: right;
 		height: 100%;
 		width: auto;
@@ -159,6 +159,18 @@
 			}
 
 		}
+	}
+
+}
+
+@media screen and (min-width: $bp__two) {
+
+	.menu-primary-nav-container {
+
+		.menu-item {
+			font-size: 1em;
+		}
+
 	}
 
 }
