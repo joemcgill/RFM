@@ -1,13 +1,60 @@
 .widget {
 	margin: 0 0 1.5em;
+	font-size: .875em;
 
 	/* Make sure select elements fit in widgets. */
 	select {
 		max-width: 100%;
 	}
+
+	ul {
+		list-style: none;
+		padding-left: 0;
+		margin-bottom: 0;
+	}
+
+	a {
+		color: $color__text-screen;
+	}
+}
+
+.widget-title {
+	@extend h4;
+	font-family: $font__main;
+	font-weight: 600;
 }
 
 /* Search widget. */
 .widget_search .search-submit {
 	display: none;
+}
+
+/* Special Widgets */
+.widget_subpages {
+	overflow: hidden;
+	background-color: #fff;
+	border-radius: $border-radius;
+	box-shadow: $box-shadow-1;
+
+	.widget-title {
+		margin: 0;
+		padding: $pad $pad;
+		background-color: $color__text-main;
+		color: #fff;
+		-webkit-font-smoothing: antialiased;
+	}
+
+	[class*="menu-item-"] {
+		padding: $pad;
+		border-bottom: 1px solid $color__background-body;
+
+		&:last-child {
+			border-bottom: none;
+		}
+	}
+
+}
+
+.widget_subpages_current_page {
+	background-color: $color__background-body;
 }
