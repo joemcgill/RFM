@@ -11,7 +11,7 @@
 		<?php
 			if ( is_page() && $post->post_parent > 0 ) {
 		?>
-		<a class="section-label" href="<?php echo get_permalink($post->post_parent); ?>"><?php echo get_the_title($post->post_parent); ?></a>
+		<a class="section-label" href="<?php echo get_permalink( $post->post_parent ); ?>"><?php echo get_the_title( $post->post_parent ); ?></a>
 		<?php } // end if ?>
 
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>

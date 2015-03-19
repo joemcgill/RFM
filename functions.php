@@ -36,9 +36,9 @@ function rfm_setup() {
 	 */
 	load_theme_textdomain( 'rfm', get_template_directory() . '/languages' );
 
-	add_image_size('hero-lg', 1400, 500, true);
-	add_image_size('hero-md', 1000, 500, true);
-	add_image_size('hero-sm', 600, 400, true);
+	add_image_size( 'hero-lg', 1400, 500, true );
+	add_image_size( 'hero-md', 1000, 500, true );
+	add_image_size( 'hero-sm', 600, 400, true );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
