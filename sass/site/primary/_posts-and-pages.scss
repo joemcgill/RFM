@@ -26,3 +26,24 @@
 	clear: both;
 	margin: 0 0 1.5em;
 }
+
+.section-label {
+	display: inline-block;
+	padding: .2em .5em;
+	background-color: $color__muted;
+	border-radius: $border-radius__sm;
+	color: #fff;
+	font-size: .75em;
+	font-weight: bold;
+	text-decoration: none;
+	text-transform: uppercase;
+
+	&:visited,
+	&:hover {
+		color: #fff;
+	}
+
+	&:hover {
+		background-color: darken( $color__muted, 10% );
+	}
+}
