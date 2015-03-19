@@ -18,6 +18,7 @@
   .post-title {
     display: inline-block;
     max-width: 20em;
+    padding: 0 $pad-half; // make space for boxshadow in .post-link
     font-size: 1.25em;
     font-weight: normal;
 
@@ -32,6 +33,9 @@
 
   .post-link {
     background: $color__primary;
+    box-shadow: -$pad-half 0 0 $color__primary, $pad-half 0 0 $color__primary; // fake padding on inline element
+    line-height: 1.4;
+
 
     &, &:hover, &:focus {
       color: #fff;
