@@ -4,9 +4,12 @@
 
 .hentry {
 
-		@include page();
+		.blog &,
+		.single-post & {
+			@include page();
+		}
 
-		.blogs &:before, {
+		.blog &:before {
 			content: "";
 			position: absolute;
 			left: 0;
@@ -63,6 +66,19 @@
 .entry-content,
 .entry-summary {
 	margin: 1.5em 0 0;
+}
+
+
+.page .entry-title {
+	margin-bottom: $margin-double;
+}
+
+.page .entry-content {
+	@include page();
+
+	h2:first-child {
+		margin-top: $margin-half;
+	}
 }
 
 .page-links {
