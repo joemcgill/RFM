@@ -82,11 +82,7 @@ function rfm_posted_on() {
 		esc_html( get_the_modified_date() )
 	);
 
-	$posted_on = sprintf(
-		_x( 'Posted on %s', 'post date', 'rfm' ),
-		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
-	);
-
+	$posted_on = '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>';
 
 	echo '<span class="posted-on">' . $posted_on . '</span>';
 
@@ -103,7 +99,7 @@ function rfm_byline() {
 		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 	);
 
-	echo '<span class="byline"> ' . $byline . '</span>';
+	echo '<span class="byline"> ' . $byline . '.</span> ';
 }
 endif;
 
@@ -117,23 +113,23 @@ function rfm_entry_footer() {
 		/* translators: used between list items, there is a space after the comma */
 		$categories_list = get_the_category_list( __( ', ', 'rfm' ) );
 		if ( $categories_list && rfm_categorized_blog() ) {
-			printf( '<span class="cat-links">' . __( 'Posted in %1$s', 'rfm' ) . '</span>', $categories_list );
+			printf( '<span class="cat-links">' . __( 'Posted in %1$s', 'rfm' ) . '</span> ', $categories_list );
 		}
 
 		/* translators: used between list items, there is a space after the comma */
 		$tags_list = get_the_tag_list( '', __( ', ', 'rfm' ) );
 		if ( $tags_list ) {
-			printf( '<span class="tags-links">' . __( 'Tagged %1$s', 'rfm' ) . '</span>', $tags_list );
+			printf( '<span class="tags-links">' . __( 'Tagged %1$s', 'rfm' ) . '</span> ', $tags_list );
 		}
 	}
 
+	rfm_byline();
+
 	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 		echo '<span class="comments-link">';
-		comments_popup_link( __( 'Leave a comment', 'rfm' ), __( '1 Comment', 'rfm' ), __( '% Comments', 'rfm' ) );
+		comments_popup_link( __( 'Leave a comment.', 'rfm' ), __( '1 Comment', 'rfm' ), __( '% Comments', 'rfm' ) );
 		echo '</span>';
 	}
-
-	edit_post_link( __( 'Edit', 'rfm' ), '<span class="edit-link">', '</span>' );
 }
 endif;
 

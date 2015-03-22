@@ -10,7 +10,7 @@
 		<?php the_post_thumbnail('large'); ?>
 	</figure>
 	<?php } ?>
-	
+
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 

@@ -27,7 +27,7 @@
 @mixin page() {
 	position: relative;
 	margin: 0 0 $margin-triple;
-	padding: $pad $pad-and-half $pad-double;
+	padding: $pad-double $pad-triple $pad-triple;
 	background-color: #fff;
 	box-shadow: $box-shadow-1;
 }
