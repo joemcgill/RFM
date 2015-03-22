@@ -21,3 +21,13 @@
 @mixin clearfix-after() {
 	clear: both;
 }
+
+
+// Page style
+@mixin page() {
+	position: relative;
+	margin: 0 0 $margin-triple;
+	padding: $pad $pad-and-half $pad-double;
+	background-color: #fff;
+	box-shadow: $box-shadow-1;
+}

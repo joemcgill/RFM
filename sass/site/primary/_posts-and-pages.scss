@@ -3,39 +3,35 @@
 }
 
 .hentry {
-	position: relative;
-	margin: 0 0 $margin-triple;
-  padding: $pad $pad-and-half $pad-double;
-  background-color: #fff;
-  box-shadow: $box-shadow-1;
 
-	.blog &:before, {
-		content: "";
-		position: absolute;
-		left: 0;
-		right: 0;
-		top: 0;
-		height: 6px;
-		background-color: $color__primary;
-		/* background-image: linear-gradient( 90deg, $color__primary, $color__primary 20%, $color__muted 20%, $color__muted 55%, saturate($color__background-body, 5%) 55%, saturate($color__background-body, 5%) ); */
+		@include page();
 
-	}
+		.blogs &:before, {
+			content: "";
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			height: 6px;
+			background-color: $color__primary;
+			/* background-image: linear-gradient( 90deg, $color__primary, $color__primary 20%, $color__muted 20%, $color__muted 55%, saturate($color__background-body, 5%) 55%, saturate($color__background-body, 5%) ); */
+		}
 
-	.featured-image {
+}
+
+.featured-image {
+	.blog & {
 		position: relative;
-		top: -$pad;
+		top: -$pad + 6px; /* space for the top border in loops */
 		margin-left: -$pad-and-half;
 		margin-right: -$pad-and-half;
 		margin-bottom: 0;
 
-		.blog & {
-			top: -$pad + 6px; /* space for the top border in loops */
-		}
+	}
 
-		> img {
-			width: 100%;
-			height: auto;
-		}
+	> img {
+		width: 100%;
+		height: auto;
 	}
 }
 
