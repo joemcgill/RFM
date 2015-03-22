@@ -3,7 +3,35 @@
 }
 
 .hentry {
-	margin: 0 0 1.5em;
+	position: relative;
+	margin: 0 0 $margin-double;
+  padding: $pad $pad-and-half $pad-double;
+  background-color: #fff;
+  box-shadow: $box-shadow-1;
+
+	.blog &:after, {
+		content: "";
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		height: 6px;
+		background-image: linear-gradient( 90deg, $color__primary, $color__primary 20%, $color__muted 20%, $color__muted 55%, saturate($color__background-body, 5%) 55%, saturate($color__background-body, 5%) );
+	}
+}
+
+.entry-title {
+	margin-top: 0;
+
+	a {
+	  color: $color__text-main;
+	  text-decoration: none;
+
+		&:hover,
+		&:focus {
+			text-decoration: underline;
+		}
+	}
 }
 
 .byline,
