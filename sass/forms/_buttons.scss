@@ -25,19 +25,19 @@ input[type="submit"] {
 		color: $color__text-main;
 		cursor: pointer;
 	}
-}
 
-.btn-primary {
-	border-color: $color__border-button-primary;
-	background: $color__background-button-primary;
-	color: #fff;
-	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
-
-	&:hover,
-	&:focus {
-		border-color: $color__border-button-primary-hover;
-		background: darken($color__background-button-primary, 5%);
+	&.btn-primary {
+		border-color: $color__border-button-primary;
+		background: $color__background-button-primary;
 		color: #fff;
+		text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+
+		&:hover,
+		&:focus {
+			border-color: $color__border-button-primary-hover;
+			background: darken($color__background-button-primary, 5%);
+			color: #fff;
+		}
 	}
 }
 
