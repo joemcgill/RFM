@@ -8,13 +8,15 @@
 
 <div class="card card-program">
   <div class="card-header">
-    <img class="card-image" src="//lorempixel.com/300/200/people/<?php echo rand( 1, 5 ); ?>" srcset="//lorempixel.com/300/200/people/<?php echo rand( 1, 5 ); ?> 1x, //lorempixel.com/600/400/people/<?php echo rand( 1, 5 ); ?> 2x">
-    <h3 class="card-title"><a href="#">Program Title</a></h3>
+    <?php if ( has_post_thumbnail() ) { ?>
+	    <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'hero-sm' ); ?> </a>
+    <?php } ?>
+    <h3 class="card-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
   </div>
   <div class="card-body">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit assumenda cum architecto.</p>
+    <?php the_excerpt(); ?>
   </div>
   <div class="card-footer">
-    <a class="cta" href="#">Learn More</a>
+    <a class="cta" href="<?php the_permalink(); ?>">Learn More</a>
   </div>
 </div>
