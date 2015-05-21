@@ -15,11 +15,31 @@ get_header(); ?>
 
 		<main id="main" class="site-main" role="main">
 
-		<div class="programs grid cols-3">
-		<?php for ( $i = 0; $i < 3; $i++ ) {
-			get_template_part( RFM_PATTERNS . 'card', 'program' );
-		} ?>
-		</div>
+		<?php
+		$home_features = new WP_Query(
+			array(
+				'category_name'	=> 'home-feature',
+				'post_per_page'	=> 3
+			)
+		);
+
+		if ( $home_features->have_posts() ) {
+		?>
+			<div class="programs grid cols-3">
+			<?php
+
+				while ( $home_features->have_posts() ) {
+					$home_features->the_post();
+
+					// display the feature cards
+					get_template_part( RFM_PATTERNS . 'card', 'program' );
+				}
+
+				// reset post data only, not the query.
+				wp_reset_postdata();
+			?>
+			</div>
+		<?php	} // end if ?>
 
 		<?php if ( have_posts() ) : ?>
 
