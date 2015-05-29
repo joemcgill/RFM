@@ -6,8 +6,5 @@ _icons/*
 !_icons/src/
 
 # SASS output
-editor-style.css
 editor-style.css.map
-style.css
 style.css.map
-style.css
