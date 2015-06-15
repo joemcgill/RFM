@@ -9,7 +9,7 @@
   "keywords": [
     "wordpress"
   ],
-  "author": "WUSTL Web",
+  "author": "Joe McGill",
   "license": "GNU General Public License v2 or later",
   "devDependencies": {
     "grunt": "^0.4.4",
