@@ -941,6 +941,20 @@ a:hover, a:active {
   color: #fff;
 }
 
+/* Mailchimp stuff */
+.widget_mailchimpsf_widget .mergeRow {
+  display: none;
+}
+
+.widget_mailchimpsf_widget .mc_signup_submit {
+  width: 10rem !important;
+  text-align: left;
+}
+
+.widget_mailchimpsf_widget #mc_signup_submit {
+  margin-top: 0;
+}
+
 /*--------------------------------------------------------------
 10.0 Content
 --------------------------------------------------------------*/
@@ -994,28 +1008,30 @@ a:hover, a:active {
   margin-left: auto;
   margin-right: auto;
 }
-.site-footer .widget-area .widget {
-  float: left;
-  margin-right: 1.5rem;
-  /* 1 widget */
-  /* 2 widget */
-  /* 3 widget */
-  /* 4 widget */
-}
-.site-footer .widget-area .widget:last-child {
-  margin-right: 0;
-}
-.site-footer .widget-area .widget:first-child:nth-last-child(1) {
-  width: 100%;
-}
-.site-footer .widget-area .widget:first-child:nth-last-child(2), .site-footer .widget-area .widget:first-child:nth-last-child(2) ~ .widget {
-  width: calc(50% - .75rem);
-}
-.site-footer .widget-area .widget:first-child:nth-last-child(3), .site-footer .widget-area .widget:first-child:nth-last-child(3) ~ .widget {
-  width: calc(33% - 1rem);
-}
-.site-footer .widget-area .widget:first-child:nth-last-child(4), .site-footer .widget-area .widget:first-child:nth-last-child(4) ~ .widget {
-  width: calc(25% - 1.125rem);
+@media screen and (min-width: 960px) {
+  .site-footer .widget-area .widget {
+    float: left;
+    margin-right: 1.5rem;
+    /* 1 widget */
+    /* 2 widget */
+    /* 3 widget */
+    /* 4 widget */
+  }
+  .site-footer .widget-area .widget:last-child {
+    margin-right: 0;
+  }
+  .site-footer .widget-area .widget:first-child:nth-last-child(1) {
+    width: 100%;
+  }
+  .site-footer .widget-area .widget:first-child:nth-last-child(2), .site-footer .widget-area .widget:first-child:nth-last-child(2) ~ .widget {
+    width: calc(50% - .75rem);
+  }
+  .site-footer .widget-area .widget:first-child:nth-last-child(3), .site-footer .widget-area .widget:first-child:nth-last-child(3) ~ .widget {
+    width: calc(33% - 1rem);
+  }
+  .site-footer .widget-area .widget:first-child:nth-last-child(4), .site-footer .widget-area .widget:first-child:nth-last-child(4) ~ .widget {
+    width: calc(25% - 1.125rem);
+  }
 }
 
 /* Grid Rules */
