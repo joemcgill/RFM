@@ -981,6 +981,8 @@ a:hover, a:active {
   .sidebar {
     float: right;
     width: 30%;
+  }
+  .page .sidebar {
     margin-top: 4rem;
   }
 
