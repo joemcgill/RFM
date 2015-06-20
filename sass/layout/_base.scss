@@ -15,13 +15,13 @@
     width: 65%;
   }
 
-  .widget-area {
+  .sidebar {
     float: right;
     width: 30%;
   }
 
   .full-width .site-main,
-  .full-width .widget-area {
+  .full-width .sidebar {
     float: none;
     width: auto;
   }
@@ -40,6 +40,45 @@
     max-width: 60 * 1.25em;
     margin: 0 auto;
     font-size: 80%;
+  }
+
+  .widget-area {
+    max-width: $size__site-wrap;
+    margin-left: auto;
+    margin-right: auto;
+
+    .widget {
+      float: left;
+      margin-right: 1.5rem;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      /* 1 widget */
+      &:first-child:nth-last-child(1) {
+        width: 100%
+      }
+
+      /* 2 widget */
+      &:first-child:nth-last-child(2),
+      &:first-child:nth-last-child(2) ~ .widget {
+        width: calc(50% - .75rem);
+      }
+
+      /* 3 widget */
+      &:first-child:nth-last-child(3),
+      &:first-child:nth-last-child(3) ~ .widget {
+        width: calc(33% - 1rem);
+      }
+
+      /* 4 widget */
+      &:first-child:nth-last-child(4),
+      &:first-child:nth-last-child(4) ~ .widget {
+        width: calc(25% - 1.125rem);
+      }
+    }
+
   }
 }
 
