@@ -86,3 +86,17 @@
 		color: #fff;
 	}
 }
+
+/* Mailchimp stuff */
+.widget_mailchimpsf_widget .mergeRow {
+		display: none;
+}
+
+.widget_mailchimpsf_widget .mc_signup_submit {
+		width: 10rem !important;
+		text-align: left;
+}
+
+.widget_mailchimpsf_widget #mc_signup_submit {
+		margin-top: 0;
+}
