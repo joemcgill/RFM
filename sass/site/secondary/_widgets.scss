@@ -33,7 +33,7 @@
 .widget_subpages {
 	overflow: hidden;
 	background-color: #fff;
-	border-radius: $border-radius;
+	border-radius: $border-radius__sm;
 	box-shadow: $box-shadow-1;
 
 	.widget-title {
@@ -51,10 +51,38 @@
 		&:last-child {
 			border-bottom: none;
 		}
+
+		a {
+			text-decoration: none;
+		}
 	}
 
 }
 
 .widget_subpages_current_page {
 	background-color: $color__background-body;
+}
+
+
+.widget_rfm-donate-widget {
+	position: relative;
+	padding: $pad $pad $pad-double;
+	color: #fff;
+	border-radius: 0 0 $border-radius__sm $border-radius__sm;
+	background: rgb(55, 71, 79) url(img/hands-bg.jpg) center center;
+	background-size: cover;
+
+	&:after {
+		content: "";
+		position: absolute;
+		width: 100%;
+		top: 0;
+		left: 0;
+		height: 5px;
+		background-color: $color__action;
+	}
+
+	.widget-title {
+		color: #fff;
+	}
 }

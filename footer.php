@@ -11,11 +11,14 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'rfm' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'rfm' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( __( 'Theme: %1$s by %2$s.', 'rfm' ), 'RFM', '<a href="http://joemcgill.net/" rel="designer">Joe McGill</a>' ); ?>
-		</div><!-- .site-info -->
+		<?php if ( is_active_sidebar( 'footer-widgets' ) ) { ?>
+			<div id="footer widget-area" class="widget-area" role="complementary">
+				<?php dynamic_sidebar( 'footer-widgets' ); ?>
+			</div><!-- #secondary -->
+		<?php } ?>
+
+
+
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
