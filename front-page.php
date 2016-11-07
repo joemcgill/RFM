@@ -28,11 +28,19 @@ get_header(); ?>
 			<div class="programs grid cols-3">
 			<?php
 
+				$i = 0;
 				while ( $home_features->have_posts() ) {
 					$home_features->the_post();
 
 					// display the feature cards
 					get_template_part( RFM_PATTERNS . 'card', 'program' );
+
+					$i++;
+
+					// Account for sticky posts by breaking after three posts.
+					if ( 3 === $i ) {
+						break;
+					}
 				}
 
 				// reset post data only, not the query.
