@@ -11,6 +11,20 @@ get_header(); ?>
 
 	<?php get_template_part( RFM_PATTERNS . 'hero' ); ?>
 
+	<section id="cta-donate" class="cta-banner">
+		<div class="content-area">
+			<h2 class="cta-banner-title">Open Hearts, Open Hands, Open Doors.</h2>
+			<p class="cta-banner-text">
+				Help RFM provide strength and support to families in crisis affected by violence, addiction, poverty, and&nbsp;homelessness.
+			</p>
+			<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+				<input type="hidden" name="cmd" value="_s-xclick">
+				<input type="hidden" name="hosted_button_id" value="7135750">
+				<input class="btn btn-primary btn-lg" type="submit" border="0" name="submit" value="Donate today">
+			</form>
+		</div>
+	</section>
+
 	<div id="primary" class="content-area full-width">
 
 		<main id="main" class="site-main" role="main">

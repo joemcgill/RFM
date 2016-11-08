@@ -130,3 +130,29 @@
 
 	@include clearfix();
 }
+
+/**
+ * Front page CTA Banner
+ */
+.cta-banner {
+	background-color: $color__action;
+	color: #fff;
+	-webkit-font-smoothing: antialiased;
+	padding-bottom: 1em;
+
+	.cta-banner-title {
+		margin-top: 0;
+	}
+
+	.cta-banner-text {
+		font-size: 1.2em;
+	}
+
+	.btn.btn-primary,
+	.btn.btn-primary:hover,
+	.btn.btn-primary:focus {
+		border-color: #fff;
+		border-color: rgba(255, 255, 255, .8);
+		font-size: 1.125em;
+	}
+}
