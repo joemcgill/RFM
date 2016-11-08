@@ -20,13 +20,13 @@ module.exports = function (grunt) {
       },
 
       sass: {
+        options: {
+          sourceMap: true,
+          outputStyle: 'compressed',
+        },
         dist: {
-          options: {
-            sourcemap: 'auto',
-            style: 'expanded'
-          },
           files: {
-            'style.css': 'sass/style.scss'
+            'style.css': 'sass/style.scss',
           }
         }
       },
