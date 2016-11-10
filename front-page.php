@@ -13,9 +13,9 @@ get_header(); ?>
 
 	<section id="cta-donate" class="cta-banner">
 		<div class="content-area">
-			<h2 class="cta-banner-title">Open Hearts, Open Hands, Open Doors.</h2>
+			<h2 class="cta-banner-title">Open Hearts, Open Hands, Open Doors</h2>
 			<p class="cta-banner-text">
-				Help RFM provide strength and support to families in crisis affected by violence, addiction, poverty, and&nbsp;homelessness.
+				Help RFM provide strength and support to families in crisis affected by violence, addiction, poverty, and&nbsp;homelessness. <strong><a class="link-reverse" href="http://riverbendfamilyministries.com/2016/11/10/open-hearts-open-hands-open-doors/">Learn about our campaign</a></strong>.
 			</p>
 			<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
 				<input type="hidden" name="cmd" value="_s-xclick">

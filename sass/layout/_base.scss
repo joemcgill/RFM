@@ -20,7 +20,7 @@
 		width: 30%;
 
 		.page & {
-			margin-top: 4rem;	
+			margin-top: 4rem;
 		}
 
 	}
@@ -136,12 +136,39 @@
  */
 .cta-banner {
 	background-color: $color__action;
+	background-image: url(img/campaign-banner-1400x400.jpg);
+	background-size: cover;
+	border-top: 1px solid #31030B;
 	color: #fff;
 	-webkit-font-smoothing: antialiased;
 	padding-bottom: 1em;
 
 	.cta-banner-title {
+		overflow: hidden;
+		height: 0;
+		padding-top: 95px;
 		margin-top: 0;
+		background: url('img/campaign-banner-text-2-line.png');
+		background-position: -5px 0;
+		background-size: contain;
+		background-repeat: no-repeat;
+		font-weight: 900;
+		font-style: italic;
+		text-shadow: 0 2px 5px rgba(#31030B, .8);
+		color: #FFCD5D;
+
+		@media screen and (min-width: $bp__one) {
+			font-size: 2.5em;
+		}
+
+		@media screen and (min-width: $bp__two) {
+			padding-top: 75px;
+			background: url('img/campaign-banner-text-1-line.png');
+			background-position: -9px 0;
+			background-size: 80%;
+			background-repeat: no-repeat;
+		}
+
 	}
 
 	.cta-banner-text {
@@ -151,8 +178,17 @@
 	.btn.btn-primary,
 	.btn.btn-primary:hover,
 	.btn.btn-primary:focus {
-		border-color: #fff;
-		border-color: rgba(255, 255, 255, .8);
+		background-color: #FFCD5D;
+		border-color: #31030B;
+		border-color: rgba(#31030B, .8);
 		font-size: 1.125em;
+		text-shadow: none;
+		color: #31030B;
+		transition: background-color 150ms ease-out;
+	}
+
+	.btn.btn-primary:hover,
+	.btn.btn-primary:focus {
+		background-color: darken(#FFCD5D, 10%);
 	}
 }
