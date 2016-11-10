@@ -18,8 +18,14 @@ a {
 	}
 }
 
-.link-reverse,
-.link-reverse:hover,
-.link-reverse:focus {
+a.link-reverse,
+a.link-reverse:hover,
+a.link-reverse:focus
+a.link-reverse:visited {
 	color: #fff;
+}
+
+a.link-reverse:hover,
+a.link-reverse:focus {
+	text-decoration: none;
 }
