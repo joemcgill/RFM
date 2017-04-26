@@ -11,7 +11,7 @@ $hero_med = wp_get_attachment_image_src( $attachment_id, 'hero-md' );
 $hero_sm = wp_get_attachment_image_src( $attachment_id, 'hero-sm' );
 
 // hard coded link to the about page for now
-$link_page = get_page_by_path( 'about' );
+$link_page = get_page_by_path( 'about-rfm' );
 $link_url = get_page_link( $link_page->ID );
 
 ?>
