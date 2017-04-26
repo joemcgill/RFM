@@ -19,7 +19,8 @@ get_header(); ?>
 		$home_features = new WP_Query(
 			array(
 				'category_name'	=> 'home-feature',
-				'post_per_page'	=> 3
+				'post_per_page'	=> 3,
+				'ignore_sticky_posts' => true,
 			)
 		);
 
